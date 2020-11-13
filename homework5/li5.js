@@ -1,0 +1,208 @@
+// ==============================================
+//     -  Створити функцію конструктор для об'єкту який описує теги
+// Властивості
+// -назва тегу
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результату
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},]
+// }
+// // ==============================================
+
+
+// function Tag(titleOfTag, action, attrs) {
+//     this.titleOfTag = titleOfTag || 'No Title';
+//     this.action = action || 'No action';
+//     this.attrs = attrs || [];
+// }
+
+// let title = '<a>';
+// let action = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.';
+// let attributes = [
+//     {titleOfAttr: 'accesskey',actionOfAttr: 'Активация ссылки с помощью комбинации клавиш.'},
+//     {titleOfAttr: 'coords',actionOfAttr: 'Устанавливает координаты активной области.' },
+//     ];
+//
+// let a = new Tag (title, action, attributes)
+// console.log(a);
+//
+// let title = '<div>';
+// let action = 'Является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого';
+// let attributes = [
+//     {titleOfAttr: 'align',actionOfAttr: 'Задает выравнивание содержимого тега <div>.'},
+//     {titleOfAttr: 'title',actionOfAttr: 'Добавляет всплывающую подсказку к содержимому.' },
+// ];
+//
+// let div = new Tag (title, action, attributes)
+// console.log(div);
+//
+// let title = '<h1>';
+// let action = 'представляет собой наиболее важный заголовок первого уровня';
+// let attributes = [
+//     {titleOfAttr: 'align',actionOfAttr: 'Определяет выравнивание заголовка.'},
+//  ];
+//
+// let h1 = new Tag (title, action, attributes)
+// console.log(h1);
+//
+// let title = '<span>';
+// let action = 'Тег <span> предназначен для определения строчных элементов документа.';
+// let attributes = [
+//     {titleOfAttr: 'class',actionOfAttr: 'Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'},
+//     {titleOfAttr: 'dir',actionOfAttr: 'Задает направление и отображение текста — слева направо или справа налево.' },
+// ];
+//
+// let span = new Tag (title, action, attributes)
+// console.log(span);
+//
+// let title = '<input>';
+// let action = 'Тег <input> является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем. ';
+// let attributes = [
+//     {titleOfAttr: 'accept',actionOfAttr: 'Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов.'},
+//     {titleOfAttr: 'alt',actionOfAttr: 'Альтернативный текст для кнопки с изображением.' },
+// ];
+//
+// let input = new Tag (title, action, attributes)
+// console.log(input);
+//
+//
+// let title = '<option>';
+// let action = 'Тег <option> определяет отдельные пункты списка, создаваемого с помощью контейнера <select>. ';
+// let attributes = [
+//     {titleOfAttr: 'disabled',actionOfAttr: 'Заблокировать для доступа элемент списка.'},
+//     {titleOfAttr: 'label',actionOfAttr: 'Указание метки пункта списка.' },
+// ];
+//
+// let option = new Tag (title, action, attributes)
+// console.log(option);
+//
+// let title = '<select>';
+// let action = 'Тег <select> позволяет создать элемент интерфейса в виде раскрывающегося списка, а также список с одним или множественным выбором, как показано далее.';
+// let attributes = [
+//     {titleOfAttr: 'accesskey',actionOfAttr: 'Позволяет перейти к списку с помощью некоторого сочетания клавиш.'},
+//     {titleOfAttr: 'autofocus',actionOfAttr: 'Устанавливает, что список получает фокус после загрузки страницы.' },
+// ];
+//
+// let select = new Tag (title, action, attributes)
+// console.log(select);
+// _____________________________________________
+// -  Створити класс  для об'єкту який описує теги
+// Властивості
+// -назва тегу
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результату
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+// }
+// ================================================
+// class Tag {
+//     constructor(titleOfTag, action, attrs) {
+//         this.titleOfTag = titleOfTag || 'No Title';
+//         this.action = action || 'No action';
+//         this.attrs = attrs || [];
+//     }
+// }
+// let title = '<a>';
+// let action = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.';
+// let attributes = [
+//     {titleOfAttr: 'accesskey',actionOfAttr: 'Активация ссылки с помощью комбинации клавиш.'},
+//     {titleOfAttr: 'coords',actionOfAttr: 'Устанавливает координаты активной области.' },
+//     ];
+//
+// let a = new Tag (title, action, attributes)
+// console.log(a);
+
+// - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+//
+// let car = {
+//         model: 'Toureg',
+//         producedOf: 'Volkswagen',
+//         year: '2018',
+//         maxSpeed: 200,
+//         volume: 3.5,
+//         driving: 'Petr',
+//         drive: function () {
+//             console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//         },
+//         info: function () {
+//             console.log(`${this.model}, ${this.producedOf}, ${this.year}, ${this.maxSpeed}, ${this.volume}`)
+//         },
+//         increaseMaxSpeed: function (newSpeed) {
+//         this.maxSpeed += newSpeed;
+//             console.log(this.maxSpeed);
+//         },
+//         changeYear: function(newValue) {
+//             this.year = newValue;
+//             console.log(this.year);
+//         },
+//         addDriver: function (driver){
+//             this.driving = driver;
+//             console.log(this.driving);
+//         }
+//     };
+// let driver = {name: 'Semen', year: 50};
+//
+// car.drive();
+// car.info();
+// car.increaseMaxSpeed(50);
+// car.changeYear(2020);
+// car.addDriver(driver)
+//
+// ==============================================
+//     - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+
