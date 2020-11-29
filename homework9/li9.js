@@ -153,7 +153,6 @@
 // });
 
 
-
 // PROMISE
 //
 // function newDay(day) {
@@ -408,3 +407,19 @@
 // l (затримка 0.7)
 // о (затримка 1)
 
+
+const str = 'Hello World';
+const stringArray = str.split('');
+
+
+function typeWriter() {
+    setTimeout(() => {
+        if (stringArray.length) {
+            document.writeln(stringArray[0]);
+            stringArray.shift();
+            typeWriter();
+        }
+
+    }, Math.floor(Math.random() *1000))
+}
+typeWriter();
